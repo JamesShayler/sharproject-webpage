@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 #center {
   display: flex;
   flex-direction: column;
@@ -18,7 +16,6 @@
   display: flex;
   border-top: 1px solid var(--border);
   text-align: left;
-  background-color: #181923;
 
   & > div {
     flex: 1 1 0;
@@ -103,28 +100,6 @@
   border-top: 1px solid var(--border);
   @media (max-width: 1024px) {
     height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
   }
 }
 

@@ -3,8 +3,6 @@ import './App.css'
 function App() {
   return (
     <>
-      <div className="ticks"></div>
-
       <section id="next-steps">
         <div id="social">
           <svg className="icon" role="presentation" aria-hidden="true">
@@ -52,8 +50,6 @@ function App() {
           </ul>
         </div>
       </section>
-
-      <div className="ticks"></div>
     </>
   )
 }
