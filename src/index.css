@@ -110,3 +110,10 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+#welcome {
+  margin-top: 64px;
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+  }
+}

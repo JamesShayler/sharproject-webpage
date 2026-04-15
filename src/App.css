@@ -37,6 +37,42 @@
   }
 }
 
+#welcome {
+  margin: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  text-align: center;
+  font-size: medium;
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+
+  .profile-pic {
+    width: 128px;
+    height: 128px;
+    border-radius: 999px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: var(--shadow);
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+
+    .profile-pic {
+      width: 128px;
+      height: 128px;
+    }
+  }
+}
+
 #docs {
   border-right: 1px solid var(--border);
 
