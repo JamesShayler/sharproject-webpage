@@ -73,6 +73,60 @@
   }
 }
 
+#projects {
+  display: flexbox;
+  border-top: 1px solid var(--border);
+  text-align: center;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  a {
+    margin: 8px;
+    color: var(--text-h);
+    font-size: 10px;
+    border-radius: 14px;
+    background: var(--social-bg);
+    display: inline-flex;
+    padding: 8px 8px;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+  }
+
+  img {
+    height: 128px;
+    width: 128px;
+    border-radius: 6px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 8px;
+  }
+}
+
 #docs {
   border-right: 1px solid var(--border);
 
