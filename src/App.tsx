@@ -5,13 +5,13 @@ function App() {
     <>
       <section id="welcome">
         <img
-          src="https://cdn.discordapp.com/avatars/645190447949676544/67e7ef40bf6072aea67512939f35e558.webp"
+          src="/src/assets/pfp.webp"
           alt="Profile picture"
           className="profile-pic"
         />
-        <h1>Welcome to my personal webpage!</h1>
+        <h1>Welcome to my website!</h1>
         <p>
-          This is a place where I share my projects, thoughts, and anything else
+          This is the place where I display my projects, and anything else
           I find interesting. Feel free to explore and get in touch!
         </p>
       </section>
