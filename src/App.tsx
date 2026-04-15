@@ -5,7 +5,7 @@ function App() {
     <>
       <section id="welcome">
         <img
-          src="/src/assets/pfp.webp"
+          src="src/assets/pfp.webp"
           alt="Profile picture"
           className="profile-pic"
         />
