@@ -65,7 +65,7 @@
   }
 
   .spinning {
-    animation: spin 1.5s ease-out;
+    animation: spin 1.6s cubic-bezier(0, 0.2, 0.4, 1);
   }
 
   .explosion-overlay {

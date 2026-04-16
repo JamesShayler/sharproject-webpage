@@ -12,11 +12,9 @@ function App() {
     setSpinning(true)
     setOverlay(true)
     setTimeout(() => {
-      setOverlay(false)
-    }, 1500)
-    setTimeout(() => {
       setSpinning(false)
-    }, 1500)
+      setOverlay(false)
+    }, 1600)
   }
 
   return (
