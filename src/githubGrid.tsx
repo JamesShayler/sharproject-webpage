@@ -87,7 +87,7 @@ export default function GitHubGrid() {
         <div
           key={i}
           style={{
-            borderRadius: 2,
+            borderRadius: "4px",
             backgroundColor: getColor(day.count),
           }}
         />

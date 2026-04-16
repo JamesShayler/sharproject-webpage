@@ -1,17 +1,40 @@
 import './App.css'
+import { useState } from 'react'
+import explosion from './assets/explosion-boom.gif'
 
 function App() {
+  const [spinning, setSpinning] = useState(false)
+  const [overlay, setOverlay] = useState(false)
+  const [clickCount, setClickCount] = useState(0)
+
+  const handleClick = () => {
+    setClickCount(Date.now())
+    setSpinning(true)
+    setOverlay(true)
+    setTimeout(() => {
+      setOverlay(false)
+    }, 1500)
+    setTimeout(() => {
+      setSpinning(false)
+    }, 1500)
+  }
+
   return (
     <>
       <section id="welcome">
-        <img
-          src="pfp.webp"
-          alt="Profile picture"
-          className="profile-pic"
-        />
+        <div className="profile-container">
+          <button className='noStyle' onClick={handleClick}>
+            <img
+              src="pfp.webp"
+              alt="Profile picture"
+              className={`profile-pic ${spinning ? 'spinning' : ''}`}
+            />
+          </button>
+          {overlay && <img src={explosion + '?t=' + clickCount} alt="Explosion" className="explosion-overlay" />}
+        </div>
         <h1>Welcome to my website!</h1>
         <p>
-          This is the place where I display my projects, and anything else I find interesting. Feel free to explore and get in touch!
+          This is the place where I will display my projects, and anything else I find interesting. Feel free to explore and get in touch!
         </p>
       </section>
 
@@ -19,18 +42,12 @@ function App() {
         <h2>My projects</h2>
         <p>Here are some of the projects I've worked on:</p>
           <section>
-            <a href="https://github.com/JamesShayler/sharproject-webpage" target="_blank">
-              <h3>This website</h3>
+            <a href="https://github.com/JamesShayler/sharproject-webpage" target="_blank" rel="noopener noreferrer">
+              <h3>Sharproject (This website)</h3>
+              <p>I would say this is self explanatory!</p>
               <img
-                src="placeholder.png"
-                alt="project img"
-              />
-            </a>
-            <a href="https://github.com/JamesShayler/sharproject-webpage" target="_blank">
-              <h3>This website again</h3>
-              <img
-                src="placeholder.png"
-                alt="project img"
+                src="https://opengraph.githubassets.com/card/JamesShayler/sharproject-webpage"
+                alt="project preview"
               />
             </a>
           </section>
@@ -46,7 +63,7 @@ function App() {
           <p>You can also find me here :0</p>
           <ul>
             <li>
-              <a href="https://github.com/JamesShayler" target="_blank">
+              <a href="https://github.com/JamesShayler" target="_blank" rel="noopener noreferrer">
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -58,7 +75,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="" target="_blank">
+              <a href="" target="_blank" rel="noopener noreferrer">
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -70,7 +87,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://www.youtube.com/@sharrr-r" target="_blank">
+              <a href="https://www.youtube.com/@sharrr-r" target="_blank" rel="noopener noreferrer">
                 <svg
                   className="button-icon"
                   role="presentation"
